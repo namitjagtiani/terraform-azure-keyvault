@@ -59,7 +59,7 @@ This code deploys a Keyvault and associated parameters that can then be consumed
 - After the PR is approved, merge your code to master
 - Ideally after a merge to `master` your CICD tool should kick off a pipeline to build your infrastructure
 
-### Using the code with a Version Control System like Github
+### Using the code without a Version Control System like Github
 
 - Copy the files to a local folder on your computer. You can clone the repo if you want to.
 - Create a `temp.tfvars` file to feed the required variables.
