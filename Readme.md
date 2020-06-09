@@ -84,3 +84,4 @@ This code deploys a Keyvault and associated parameters that can then be consumed
 - Run `terraform plan --var-file="temp.tfvars"` to do a dry run of the code and see the infrastructure that will be built
 - Run `terraform apply --var-file="temp.tfvars` to deploy your infrastructure
   > The apply stage has an approval step where you need to enter `yes` to accept the deployment
+  > if you want to skip the approval step use `terraform apply --var-file="temp.tfvars" --auto-approve1` instead
