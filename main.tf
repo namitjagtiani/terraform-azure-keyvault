@@ -1,8 +1,14 @@
+#----------------------------------------------------------------------------#
+#                            Provider Information                            #
+#----------------------------------------------------------------------------#
+
+# Create New Resource Group
 resource "azurerm_resource_group" "kv_rg" {
   name     = "network-kv-rg"
   location = "australiasoutheast"
 }
 
+# Create New KeyVault
 resource "azurerm_key_vault" "network_kv" {
   name                        = "network-kv"
   location                    = azurerm_resource_group.kv_rg.location
@@ -20,6 +26,7 @@ resource "azurerm_key_vault" "network_kv" {
   }
 }
 
+# Create New Keyvault Access Policy
 resource "azurerm_key_vault_access_policy" "network-kv-access-pol" {
   key_vault_id = azurerm_key_vault.network_kv.id
 
@@ -29,4 +36,12 @@ resource "azurerm_key_vault_access_policy" "network-kv-access-pol" {
   secret_permissions = [
     "get", "list", "set",
   ]
+}
+
+# Create New Keyvault Secrets
+resource "azurerm_key_vault_secret" "test_secret" {
+  for_each     = local.secret_map
+  name         = each.key
+  value        = each.value
+  key_vault_id = azurerm_key_vault.network_kv.id
 }

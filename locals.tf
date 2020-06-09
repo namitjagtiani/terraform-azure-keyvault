@@ -1,7 +1,11 @@
+#----------------------------------------------------------------------------#
+#                            Local Definitions                               #
+#----------------------------------------------------------------------------#
+
 locals {
 
 secret_map = {
-# secrets for 
+# secrets for the GETVPN routers
    rtr-username       = var.rtr-username
    aus-gm-rtr1-secret = var.aus-gm-rtr1-secret
    aus-gm-rtr2-secret = var.aus-gm-rtr2-secret
