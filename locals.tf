@@ -13,6 +13,10 @@ locals {
     aue-gm-rtr1-secret = var.aue-gm-rtr1-secret
     aue-gm-rtr2-secret = var.aue-gm-rtr2-secret
     aue-ks-rtr-secret  = var.aue-ks-rtr-secret
-    auc-gm-rtr-secret  = var.auc-gm-rtr-secret
+    auc-gm-rtr1-secret = var.auc-gm-rtr1-secret
+    auc-gm-rtr2-secret = var.auc-gm-rtr2-secret
+    jmp-adm-username   = var.jmp-adm-username
+    jmp-password       = var.jmp-password
+    gvpn-preshared-key = var.gvpn-preshared-key
   }
 }

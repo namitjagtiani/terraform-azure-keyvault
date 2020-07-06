@@ -14,4 +14,9 @@ variable "aus-ks-rtr-secret" {}  # Cisco CSR AUS Key Server Router Password
 variable "aue-gm-rtr1-secret" {} # Cisco CSR AUE Group Member 1 Router Password
 variable "aue-gm-rtr2-secret" {} # Cisco CSR AUE Group Member 2 Router Password
 variable "aue-ks-rtr-secret" {}  # Cisco CSR AUE Key Server Router Password
-variable "auc-gm-rtr-secret" {}  # Cisco CSR AUC Group Member Router Password
+variable "auc-gm-rtr1-secret" {} # Cisco CSR AUC Group Member Router Password
+variable "auc-gm-rtr2-secret" {} # Cisco CSR AUC Group Member Router Password
+variable "jmp-adm-username" {}   # Jumphost Username
+variable "jmp-password" {}       # Jumphost Password
+variable "gvpn-preshared-key" {}
+variable "my_ip" {}              # IP for External Keyvault Access
